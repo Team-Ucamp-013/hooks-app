@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const EfectoPage = () => {
-  const [data, setData] = useState()
+  const [data, setData] = useState([])
 
   const getData = async () => {
     const { data } = await axios.get('https://jsonplaceholder.typicode.com/posts')
