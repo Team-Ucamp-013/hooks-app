@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import axios from 'axios'
 import './App.css'
+import { Link } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,7 +19,10 @@ function App() {
     <div className="App">
 
       <div className="card">
-        <div>
+        <Link to='/efecto-page' >
+          Efectos page
+        </Link>
+        {/* <div>
           <h1>
             {count}
           </h1>
@@ -45,7 +49,7 @@ function App() {
               <div>{item.title}</div>
             ))
           }
-        </div>
+        </div> */}
       </div>
     </div>
   )
