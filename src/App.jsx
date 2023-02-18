@@ -2,22 +2,15 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import axios from 'axios'
 import './App.css'
+import { useFetchGifs } from './hooks/useFetchGifs'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [posts, setPosts] = useState()
-
-  const getPost = async () => {
-    const url = 'https://jsonplaceholder.typicode.com/posts'
-    const response = await axios.get(url)
-    console.log(response)
-    setPosts(response.data)
-  }
-
+  const [data, error, loading, fetchData] = useFetchGifs()
+  console.log('En app', data)
   return (
     <div className="App">
 
-      <div className="card">
+      {/* <div className="card">
         <div>
           <h1>
             {count}
@@ -46,6 +39,9 @@ function App() {
             ))
           }
         </div>
+      </div> */}
+      <div>
+
       </div>
     </div>
   )
